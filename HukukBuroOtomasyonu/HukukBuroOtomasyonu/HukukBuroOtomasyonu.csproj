@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37DB4E3C-5BF8-49D7-867D-B68B70B9BD9B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HukukBuroOtomasyonu</RootNamespace>
+    <AssemblyName>HukukBuroOtomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adliye\FormAdliyeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adliye\FormAdliyeEkle.Designer.cs">
+      <DependentUpon>FormAdliyeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adliye\FormAdliyeGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adliye\FormAdliyeGuncelle.Designer.cs">
+      <DependentUpon>FormAdliyeGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adliye\FormAdliyeGuncelleDoldur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adliye\FormAdliyeGuncelleDoldur.Designer.cs">
+      <DependentUpon>FormAdliyeGuncelleDoldur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adliye\FormAdliyeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adliye\FormAdliyeler.Designer.cs">
+      <DependentUpon>FormAdliyeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adliye\FormAdliyeRaporOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adliye\FormAdliyeRaporOlustur.Designer.cs">
+      <DependentUpon>FormAdliyeRaporOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adliye\FormAdliyeSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adliye\FormAdliyeSil.Designer.cs">
+      <DependentUpon>FormAdliyeSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cryRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DavaGelismesi\FormDavaGelismeleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaGelismesi\FormDavaGelismeleri.Designer.cs">
+      <DependentUpon>FormDavaGelismeleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaGelismesi\FormDavaGelismesiEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaGelismesi\FormDavaGelismesiEkle.Designer.cs">
+      <DependentUpon>FormDavaGelismesiEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaGelismesi\FormDavaGelismesiGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaGelismesi\FormDavaGelismesiGuncelle.Designer.cs">
+      <DependentUpon>FormDavaGelismesiGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaGelismesi\FormDavaGelismesiGuncelleDoldur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaGelismesi\FormDavaGelismesiGuncelleDoldur.Designer.cs">
+      <DependentUpon>FormDavaGelismesiGuncelleDoldur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaGelismesi\FormDavaGelismesiRaporOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaGelismesi\FormDavaGelismesiRaporOlustur.Designer.cs">
+      <DependentUpon>FormDavaGelismesiRaporOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaGelismesi\FormDavaGelismesiSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaGelismesi\FormDavaGelismesiSil.Designer.cs">
+      <DependentUpon>FormDavaGelismesiSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Davalar\FormDavaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Davalar\FormDavaEkle.Designer.cs">
+      <DependentUpon>FormDavaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Davalar\FormDavaGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Davalar\FormDavaGuncelle.Designer.cs">
+      <DependentUpon>FormDavaGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Davalar\FormDavaGuncelleDoldur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Davalar\FormDavaGuncelleDoldur.Designer.cs">
+      <DependentUpon>FormDavaGuncelleDoldur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Davalar\FormDavalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Davalar\FormDavalar.Designer.cs">
+      <DependentUpon>FormDavalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Davalar\FormDavaRaporOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Davalar\FormDavaRaporOlustur.Designer.cs">
+      <DependentUpon>FormDavaRaporOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Davalar\FormDavaSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Davalar\FormDavaSil.Designer.cs">
+      <DependentUpon>FormDavaSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaSonucu\FormDavaSonuclari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaSonucu\FormDavaSonuclari.Designer.cs">
+      <DependentUpon>FormDavaSonuclari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaSonucu\FormDavaSonucuEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaSonucu\FormDavaSonucuEkle.Designer.cs">
+      <DependentUpon>FormDavaSonucuEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaSonucu\FormDavaSonucuGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaSonucu\FormDavaSonucuGuncelle.Designer.cs">
+      <DependentUpon>FormDavaSonucuGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaSonucu\FormDavaSonucuGuncelleDoldur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaSonucu\FormDavaSonucuGuncelleDoldur.Designer.cs">
+      <DependentUpon>FormDavaSonucuGuncelleDoldur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaSonucu\FormDavaSonucuRaporOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaSonucu\FormDavaSonucuRaporOlustur.Designer.cs">
+      <DependentUpon>FormDavaSonucuRaporOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DavaSonucu\FormDavaSonucuSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DavaSonucu\FormDavaSonucuSil.Designer.cs">
+      <DependentUpon>FormDavaSonucuSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuroOtomasyonu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuroOtomasyonu.Designer.cs">
+      <DependentUpon>FormBuroOtomasyonu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGirisEkrani.Designer.cs">
+      <DependentUpon>FormGirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKullaniciBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKullaniciBilgileri.Designer.cs">
+      <DependentUpon>FormKullaniciBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormKarsiTaraf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormKarsiTaraf.Designer.cs">
+      <DependentUpon>FormKarsiTaraf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormKarsiTarafEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormKarsiTarafEkle.Designer.cs">
+      <DependentUpon>FormKarsiTarafEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormKarsiTarafGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormKarsiTarafGuncelle.Designer.cs">
+      <DependentUpon>FormKarsiTarafGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormKarsiTarafGuncelleDoldur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormKarsiTarafGuncelleDoldur.Designer.cs">
+      <DependentUpon>FormKarsiTarafGuncelleDoldur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormKarsiTarafRaporOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormKarsiTarafRaporOlustur.Designer.cs">
+      <DependentUpon>FormKarsiTarafRaporOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormKarsiTarafSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormKarsiTarafSil.Designer.cs">
+      <DependentUpon>FormKarsiTarafSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormRaporGoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KarsiTaraf\FormRaporGoster.Designer.cs">
+      <DependentUpon>FormRaporGoster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciBilgileri.cs" />
+    <Compile Include="Muvekkiller\FormMuvekkilEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Muvekkiller\FormMuvekkilEkle.Designer.cs">
+      <DependentUpon>FormMuvekkilEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Muvekkiller\FormMuvekkilGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Muvekkiller\FormMuvekkilGuncelle.Designer.cs">
+      <DependentUpon>FormMuvekkilGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Muvekkiller\FormMuvekkilGuncelleDoldur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Muvekkiller\FormMuvekkilGuncelleDoldur.Designer.cs">
+      <DependentUpon>FormMuvekkilGuncelleDoldur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Muvekkiller\FormMuvekkiller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Muvekkiller\FormMuvekkiller.Designer.cs">
+      <DependentUpon>FormMuvekkiller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Muvekkiller\FormMuvekkilRaporOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Muvekkiller\FormMuvekkilRaporOlustur.Designer.cs">
+      <DependentUpon>FormMuvekkilRaporOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Muvekkiller\FormMuvekkilSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Muvekkiller\FormMuvekkilSil.Designer.cs">
+      <DependentUpon>FormMuvekkilSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel_Islemleri\FormPersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel_Islemleri\FormPersonelEkle.Designer.cs">
+      <DependentUpon>FormPersonelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel_Islemleri\FormPersonelGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel_Islemleri\FormPersonelGuncelle.Designer.cs">
+      <DependentUpon>FormPersonelGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel_Islemleri\FormPersonelGuncelleDoldur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel_Islemleri\FormPersonelGuncelleDoldur.Designer.cs">
+      <DependentUpon>FormPersonelGuncelleDoldur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel_Islemleri\FormPersoneller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel_Islemleri\FormPersoneller.Designer.cs">
+      <DependentUpon>FormPersoneller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel_Islemleri\FormPersonelRaporOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel_Islemleri\FormPersonelRaporOlustur.Designer.cs">
+      <DependentUpon>FormPersonelRaporOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel_Islemleri\FormPersonelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel_Islemleri\FormPersonelSil.Designer.cs">
+      <DependentUpon>FormPersonelSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rapor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rapor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Adliye\FormAdliyeEkle.resx">
+      <DependentUpon>FormAdliyeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adliye\FormAdliyeGuncelle.resx">
+      <DependentUpon>FormAdliyeGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adliye\FormAdliyeGuncelleDoldur.resx">
+      <DependentUpon>FormAdliyeGuncelleDoldur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adliye\FormAdliyeler.resx">
+      <DependentUpon>FormAdliyeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adliye\FormAdliyeRaporOlustur.resx">
+      <DependentUpon>FormAdliyeRaporOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adliye\FormAdliyeSil.resx">
+      <DependentUpon>FormAdliyeSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cryRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaGelismesi\FormDavaGelismeleri.resx">
+      <DependentUpon>FormDavaGelismeleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaGelismesi\FormDavaGelismesiEkle.resx">
+      <DependentUpon>FormDavaGelismesiEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaGelismesi\FormDavaGelismesiGuncelle.resx">
+      <DependentUpon>FormDavaGelismesiGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaGelismesi\FormDavaGelismesiGuncelleDoldur.resx">
+      <DependentUpon>FormDavaGelismesiGuncelleDoldur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaGelismesi\FormDavaGelismesiRaporOlustur.resx">
+      <DependentUpon>FormDavaGelismesiRaporOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaGelismesi\FormDavaGelismesiSil.resx">
+      <DependentUpon>FormDavaGelismesiSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Davalar\FormDavaEkle.resx">
+      <DependentUpon>FormDavaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Davalar\FormDavaGuncelle.resx">
+      <DependentUpon>FormDavaGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Davalar\FormDavaGuncelleDoldur.resx">
+      <DependentUpon>FormDavaGuncelleDoldur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Davalar\FormDavalar.resx">
+      <DependentUpon>FormDavalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Davalar\FormDavaRaporOlustur.resx">
+      <DependentUpon>FormDavaRaporOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Davalar\FormDavaSil.resx">
+      <DependentUpon>FormDavaSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaSonucu\FormDavaSonuclari.resx">
+      <DependentUpon>FormDavaSonuclari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaSonucu\FormDavaSonucuEkle.resx">
+      <DependentUpon>FormDavaSonucuEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaSonucu\FormDavaSonucuGuncelle.resx">
+      <DependentUpon>FormDavaSonucuGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaSonucu\FormDavaSonucuGuncelleDoldur.resx">
+      <DependentUpon>FormDavaSonucuGuncelleDoldur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaSonucu\FormDavaSonucuRaporOlustur.resx">
+      <DependentUpon>FormDavaSonucuRaporOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DavaSonucu\FormDavaSonucuSil.resx">
+      <DependentUpon>FormDavaSonucuSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuroOtomasyonu.resx">
+      <DependentUpon>FormBuroOtomasyonu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGirisEkrani.resx">
+      <DependentUpon>FormGirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKullaniciBilgileri.resx">
+      <DependentUpon>FormKullaniciBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KarsiTaraf\FormKarsiTaraf.resx">
+      <DependentUpon>FormKarsiTaraf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KarsiTaraf\FormKarsiTarafEkle.resx">
+      <DependentUpon>FormKarsiTarafEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KarsiTaraf\FormKarsiTarafGuncelle.resx">
+      <DependentUpon>FormKarsiTarafGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KarsiTaraf\FormKarsiTarafGuncelleDoldur.resx">
+      <DependentUpon>FormKarsiTarafGuncelleDoldur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KarsiTaraf\FormKarsiTarafRaporOlustur.resx">
+      <DependentUpon>FormKarsiTarafRaporOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KarsiTaraf\FormKarsiTarafSil.resx">
+      <DependentUpon>FormKarsiTarafSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KarsiTaraf\FormRaporGoster.resx">
+      <DependentUpon>FormRaporGoster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Muvekkiller\FormMuvekkilEkle.resx">
+      <DependentUpon>FormMuvekkilEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Muvekkiller\FormMuvekkilGuncelle.resx">
+      <DependentUpon>FormMuvekkilGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Muvekkiller\FormMuvekkilGuncelleDoldur.resx">
+      <DependentUpon>FormMuvekkilGuncelleDoldur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Muvekkiller\FormMuvekkiller.resx">
+      <DependentUpon>FormMuvekkiller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Muvekkiller\FormMuvekkilRaporOlustur.resx">
+      <DependentUpon>FormMuvekkilRaporOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Muvekkiller\FormMuvekkilSil.resx">
+      <DependentUpon>FormMuvekkilSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel_Islemleri\FormPersonelEkle.resx">
+      <DependentUpon>FormPersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel_Islemleri\FormPersonelGuncelle.resx">
+      <DependentUpon>FormPersonelGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel_Islemleri\FormPersonelGuncelleDoldur.resx">
+      <DependentUpon>FormPersonelGuncelleDoldur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel_Islemleri\FormPersoneller.resx">
+      <DependentUpon>FormPersoneller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel_Islemleri\FormPersonelRaporOlustur.resx">
+      <DependentUpon>FormPersonelRaporOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel_Islemleri\FormPersonelSil.resx">
+      <DependentUpon>FormPersonelSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Rapor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rapor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LOGO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSHTML">
+      <Guid>{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
